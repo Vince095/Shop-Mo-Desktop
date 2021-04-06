@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopmo.controllers.Controller">
+   <children>
+      <BorderPane prefHeight="529.0" prefWidth="598.0">
+         <left>
+            <Pane prefHeight="333.0" prefWidth="298.0" style="-fx-background-color: #232F3E;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="284.0" fitWidth="298.0" layoutX="1.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/shopMO.png" />
+                     </image></ImageView>
+               </children></Pane>
+         </left>
+         <right>
+            <Pane prefHeight="529.0" prefWidth="302.0" style="-fx-background-color: #f2f2f2;" BorderPane.alignment="CENTER">
+               <children>
+
+                  <TextField id="username" fx:id="username" layoutX="39.0" layoutY="176.0" prefHeight="36.0" prefWidth="227.0" promptText="name or email" />
+                  <Label layoutX="36.0" layoutY="145.0" prefHeight="31.0" prefWidth="83.0" text="Username" textFill="#232f3e">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="224.0" prefHeight="31.0" prefWidth="83.0" text="Password" textFill="#232f3e">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <PasswordField id="password" fx:id="password" layoutX="36.0" layoutY="255.0" prefHeight="34.0" prefWidth="230.0" promptText="Enter password" />
+                  <Button id="loginBtn" fx:id="loginBtn" layoutX="175.0" layoutY="326.0" mnemonicParsing="false" onAction="#handleButtonClicks" onKeyPressed="#handleButtonClicks" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #FEBD69;" text="Login" textFill="#232f3e">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="36.0" layoutY="321.0" prefHeight="42.0" prefWidth="136.0" text="Dont have an accout?" textAlignment="JUSTIFY" textFill="#febd69" textOverrun="WORD_ELLIPSIS" underline="true">
+                     <font>
+                        <Font name="Franklin Gothic Book Italic" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button id="gotoStore" fx:id="gotoStore" accessibleRole="HYPERLINK" layoutX="39.0" layoutY="394.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="37.0" prefWidth="228.0" style="-fx-background-color: #232F3E;" text="Visit store" textFill="#f9fcff">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="register" fx:id="register" layoutX="175.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleButtonClicks" opacity="0.43" prefHeight="37.0" prefWidth="91.0" style="-fx-background-color: #fcfcfc;" text="Register" textFill="#232f3e">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </right></BorderPane>
+   </children>
+</AnchorPane>
