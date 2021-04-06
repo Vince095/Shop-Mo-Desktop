@@ -9,6 +9,7 @@ public class StoreApi {
     private static final String loginUrl = baseUrl+apiUrl+"login";
     private static final String registerUrl = baseUrl+apiUrl+"register";
     private static final String orderUrl = baseUrl+adminUrl+"orders";
+    private static final String usersUrl = baseUrl+adminUrl+"users";
 
     public static String getLoginUrl() {
         return loginUrl;
@@ -20,5 +21,9 @@ public class StoreApi {
 
     public static String getOrderUrl() {
         return orderUrl;
+    }
+
+    public static String getUsersUrl() {
+        return usersUrl;
     }
 }

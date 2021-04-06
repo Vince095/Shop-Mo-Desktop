@@ -11,6 +11,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import models.apiRequests.Post;
 import models.order.AdminInfo;
+import models.user.allUsers.Users;
 import shopmo.utils.Loader;
 
 import java.io.IOException;
@@ -18,6 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import static models.StoreApi.getOrderUrl;
+import static models.StoreApi.getUsersUrl;
 import static shopmo.controllers.Controller.*;
 
 public class HomeController implements Initializable {
@@ -42,6 +44,9 @@ public class HomeController implements Initializable {
     private Label userNo;
     @FXML
     private Label stockNo;
+
+    Post request = new Post();
+    Gson gson = new Gson();
 
     @FXML
     private void handleButtons(){
@@ -81,13 +86,22 @@ public class HomeController implements Initializable {
     }
 
     private void dashBoardInfo() throws IOException {
-        Post request = new Post();
-        Gson gson = new Gson();
 
+        UsersInfo();
         String res = request.getRequest(getOrderUrl(), getTokenData());
         AdminInfo data = gson.fromJson(res , AdminInfo.class);
 
         amount.setText("$"+ String.format("%.2f",data.getTotalAmount()));
+        orderNo.setText(String.valueOf(data.getOrders().size()));
+
+    }
+    private void UsersInfo() throws IOException {
+
+        String res = request.getRequest(getUsersUrl() , getTokenData());
+        Users userData = gson.fromJson(res , Users.class);
+
+        userNo.setText(String.valueOf(userData.getUsers().size()));
+
 
     }
 

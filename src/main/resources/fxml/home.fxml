@@ -227,9 +227,9 @@
                               </Label>
                               <Line endX="114.0" layoutX="128.0" layoutY="108.0" startX="-119.0" stroke="#41753c63" />
                               <Button alignment="TOP_LEFT" layoutX="9.0" layoutY="109.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="230.0" style="-fx-background-color: none;" text="View details" textFill="#f4f5f3" />
-                              <Label id="productNo" fx:id="productNo" layoutX="109.0" layoutY="66.0" text="No" textFill="WHITE">
+                              <Label id="productNo" fx:id="productNo" alignment="CENTER" layoutX="100.0" layoutY="55.0" prefHeight="36.0" prefWidth="40.0" text="No" textFill="WHITE">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="16.0" />
                                  </font></Label>
                               <ImageView fitHeight="12.0" fitWidth="17.0" layoutX="229.0" layoutY="116.0" opacity="0.48" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -247,9 +247,9 @@
                               </Label>
                               <Line endX="111.0" layoutX="128.0" layoutY="108.0" startX="-111.0" stroke="#85424285" />
                               <Button alignment="TOP_LEFT" layoutX="17.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="226.0" style="-fx-background-color: none;" text="View details" textFill="#f4f5f3" />
-                              <Label id="orderNo" fx:id="orderNo" layoutX="119.0" layoutY="66.0" text="No" textFill="WHITE">
+                              <Label id="orderNo" fx:id="orderNo" alignment="CENTER" layoutX="104.0" layoutY="56.0" prefHeight="41.0" prefWidth="43.0" text="No" textFill="WHITE">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
                               <ImageView fitHeight="12.0" fitWidth="17.0" layoutX="228.0" layoutY="115.0" opacity="0.41" pickOnBounds="true" preserveRatio="true">
@@ -268,9 +268,9 @@
                               </Label>
                               <Line endX="112.0" fill="#00000086" layoutX="128.0" layoutY="109.0" startX="-115.0" stroke="#41769794" />
                               <Button alignment="TOP_LEFT" layoutX="14.0" layoutY="109.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="228.0" style="-fx-background-color: none;" text="View details" textFill="#f4f5f3" />
-                              <Label id="userNo" fx:id="userNo" layoutX="127.0" layoutY="66.0" text="No" textFill="WHITE">
+                              <Label id="userNo" fx:id="userNo" alignment="CENTER" layoutX="117.0" layoutY="56.0" prefHeight="36.0" prefWidth="51.0" text="No" textFill="WHITE">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
                               <ImageView fitHeight="12.0" fitWidth="17.0" layoutX="232.0" layoutY="119.0" opacity="0.56" pickOnBounds="true" preserveRatio="true">
@@ -289,9 +289,9 @@
                               </Label>
                               <Line endX="100.0" layoutX="140.0" layoutY="113.0" startX="-126.5" stroke="#907b2f8f" />
                               <Button alignment="TOP_LEFT" layoutX="13.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="223.0" style="-fx-background-color: none;" text="View details" textFill="#f4f5f3" />
-                              <Label id="stockNo" fx:id="stockNo" layoutX="121.0" layoutY="76.0" text="No" textFill="WHITE">
+                              <Label id="stockNo" fx:id="stockNo" alignment="CENTER" layoutX="98.0" layoutY="56.0" prefHeight="41.0" prefWidth="55.0" text="No" textFill="WHITE">
                                  <font>
-                                    <Font name="System Bold" size="12.0" />
+                                    <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
                               <ImageView disable="true" fitHeight="12.0" fitWidth="17.0" layoutX="220.0" layoutY="118.0" opacity="0.46" pickOnBounds="true" preserveRatio="true">

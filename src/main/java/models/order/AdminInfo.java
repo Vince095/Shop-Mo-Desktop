@@ -7,6 +7,18 @@ public class AdminInfo {
     private double totalAmount;
     private List<Order> orders;
 
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
+    public void setSuccess(boolean success) {
+        this.success = success;
+    }
+
     public double getTotalAmount() {
         return totalAmount;
     }
