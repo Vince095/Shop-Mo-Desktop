@@ -1,6 +1,7 @@
 package shopmo.controllers;
 
 import com.google.gson.Gson;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -8,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
@@ -42,11 +44,13 @@ public class Controller implements Initializable {
     private TextField password;
     @FXML
     private Button gotoStore;
+    @FXML
+    private ProgressBar progress;
 
 
 
     @FXML
-    private  void handleButtonClicks(javafx.event.ActionEvent mouseEvent){
+    private  void handleButtonClicks(ActionEvent mouseEvent){
         if(mouseEvent.getSource() == register){
             System.out.println("clicked");
             loadStage("/fxml/register.fxml", "Register");
@@ -55,6 +59,7 @@ public class Controller implements Initializable {
         loginBtn.setOnAction(event -> {
             try {
                 if(login().equals("success") ){
+                    progress.setVisible(true);
                   loadStage("/fxml/home.fxml", "shopMO-dashboard");
                   Stage stage = (Stage)loginBtn.getScene().getWindow();
                   stage.close();
@@ -102,11 +107,13 @@ public class Controller implements Initializable {
            userName = data.getUser().getName();
            userImage = data.getUser().getAvatar().getAvatarUrl();
            tokenData = data.getToken();
+           System.out.println(data.getSuccess()+" logged as "+ data.getUser().getName());
+
         }
-        System.out.println(data.getSuccess()+" logged as "+ data.getUser());
 
         if(email.isEmpty() || pass.isEmpty() || !data.getSuccess()){
             status = "error";
+            System.out.println(data.getSuccess() + ": "+data.getMessage());
         }
         return status;
     }

@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="774.0" prefWidth="1279.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shopmo.controllers.HomeController">
    <children>
-      <BorderPane layoutX="-12.0" layoutY="-2.0" prefHeight="774.0" prefWidth="1330.0">
+      <BorderPane layoutX="-12.0" layoutY="-2.0" prefHeight="774.0" prefWidth="1330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <Pane prefHeight="92.0" prefWidth="1288.0" style="-fx-background-color: #232F3E;" BorderPane.alignment="CENTER">
                <children>
@@ -49,7 +49,7 @@
                         <Image url="@../images/cart.png" />
                      </image>
                   </ImageView>
-                  <Label alignment="CENTER" layoutX="898.0" layoutY="45.0" prefHeight="0.0" prefWidth="17.0" style="-fx-background-color: #FEBD69; -fx-border-radius: 100;" text="2">
+                  <Label id="cart" fx:id="cart" alignment="CENTER" layoutX="898.0" layoutY="45.0" prefHeight="0.0" prefWidth="17.0" style="-fx-background-color: #FEBD69; -fx-border-radius: 100;" text="2">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -119,7 +119,7 @@
          <left>
             <Pane prefHeight="728.0" prefWidth="284.0" style="-fx-background-color: #232F3E;" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="dashBoardBtn" fx:id="dashBoardBtn" layoutX="16.0" layoutY="86.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="40.0" prefWidth="265.0" stylesheets="@../css/main.css" text="Dashboard" textFill="#dcd7cb">
+                  <Button id="dashBoardBtn" fx:id="dashBoardBtn" graphicTextGap="10.0" layoutX="16.0" layoutY="86.0" mnemonicParsing="false" onAction="#handleButtons" prefHeight="40.0" prefWidth="265.0" stylesheets="@../css/main.css" text="Dashboard" textFill="#dcd7cb">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -130,7 +130,7 @@
                         <FontAwesomeIconView fill="aliceblue" glyphName="DASHBOARD"/>
                      </graphic-->
                   </Button>
-                  <Button layoutX="13.0" layoutY="193.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Users" textFill="#f0ece2">
+                  <Button graphicTextGap="10.0" layoutX="13.0" layoutY="193.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Users" textFill="#f0ece2">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -141,7 +141,7 @@
                         <FontAwesomeIconView fill="aliceblue" glyphName="USER"/>
                      </graphic-->
                   </Button>
-                  <Button layoutX="12.0" layoutY="133.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="270.0" stylesheets="@../css/main.css" text="Products" textFill="#f0ece2">
+                  <Button id="productBtn" fx:id="productBtn" graphicTextGap="10.0" layoutX="12.0" layoutY="133.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="270.0" stylesheets="@../css/main.css" text="Products" textFill="#f0ece2">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -161,7 +161,7 @@
                      </graphic-->
 
                   </Button>
-                  <Button layoutX="13.0" layoutY="246.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Orders" textFill="#f0ece2">
+                  <Button graphicTextGap="10.0" layoutX="13.0" layoutY="246.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Orders" textFill="#f0ece2">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -172,7 +172,7 @@
                         <FontAwesomeIconView fill="aliceblue" glyphName="TRUCK"/>
                      </graphic-->
                   </Button>
-                  <Button layoutX="13.0" layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Reviews" textFill="#f0ece2">
+                  <Button graphicTextGap="10.0" layoutX="13.0" layoutY="301.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="268.0" stylesheets="@../css/main.css" text="Reviews" textFill="#f0ece2">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
@@ -183,7 +183,7 @@
                         <FontAwesomeIconView fill="aliceblue" glyphName="STAR"/>
                      </graphic-->
                   </Button>
-                  <Label contentDisplay="CENTER" layoutX="12.0" prefHeight="59.0" prefWidth="272.0" style="-fx-background-color: #FEBD69;" text="Store Administration" textAlignment="CENTER" textFill="#232f3e">
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="59.0" prefWidth="284.0" style="-fx-background-color: #FEBD69;" text="Store Administration" textAlignment="CENTER" textFill="#232f3e">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -220,7 +220,7 @@
                         </Label>
                         <Pane layoutX="145.0" layoutY="208.0" prefHeight="148.0" prefWidth="255.0" style="-fx-background-color: #28A745; -fx-background-radius: 6;">
                            <children>
-                              <Label alignment="CENTER" layoutX="37.0" layoutY="26.0" prefHeight="28.0" prefWidth="162.0" text="Product" textAlignment="CENTER" textFill="#e4e9ee">
+                              <Label alignment="CENTER" layoutX="37.0" layoutY="26.0" prefHeight="28.0" prefWidth="162.0" text="Products" textAlignment="CENTER" textFill="#e4e9ee">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
@@ -301,6 +301,20 @@
                               </ImageView>
                            </children>
                         </Pane>
+                     </children>
+                  </Pane>
+                  <Pane id="productPane" fx:id="productPane" layoutX="-2.0" prefHeight="683.0" prefWidth="997.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="123.0" text="Products" textFill="#0d2031">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane layoutX="13.0" layoutY="63.0" prefHeight="301.0" prefWidth="981.0">
+                           <content>
+                              <HBox fx:id="cardLayout" prefHeight="285.0" prefWidth="1077.0" />
+                           </content>
+                        </ScrollPane>
                      </children>
                   </Pane>
                </children>

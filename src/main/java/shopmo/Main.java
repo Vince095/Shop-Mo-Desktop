@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class Main extends Application {
     ConnectToDB con = new ConnectToDB();
+
+    //TODO:for testing
     private String url = "http://shop-mo.herokuapp.com/api/v1/login";
     private String email = "vincent_thejane1@outlook.com";
     private String password = "thejane123";

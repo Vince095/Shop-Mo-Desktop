@@ -18,7 +18,7 @@
                </children></Pane>
          </left>
          <right>
-            <Pane prefHeight="529.0" prefWidth="302.0" style="-fx-background-color: #f2f2f2;" BorderPane.alignment="CENTER">
+            <Pane accessibleText="hh" prefHeight="529.0" prefWidth="302.0" BorderPane.alignment="CENTER">
                <children>
 
                   <TextField id="username" fx:id="username" layoutX="39.0" layoutY="176.0" prefHeight="36.0" prefWidth="227.0" promptText="name or email" />
@@ -53,6 +53,7 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
+                  <ProgressBar id="progress" fx:id="progress" layoutX="40.0" layoutY="496.0" onMouseClicked="#handleButtonClicks" opacity="0.53" prefHeight="19.0" prefWidth="226.0" style="-fx-border: none; -fx-border-radius: 20;" visible="false" />
                </children>
             </Pane>
          </right></BorderPane>
